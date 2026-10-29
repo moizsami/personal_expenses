@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-29 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "defaults_section",
+  "company",
+  "cost_center",
+  "column_break_defaults",
+  "default_usd_rate",
+  "auto_create",
+  "auto_submit",
+  "senders_section",
+  "senders",
+  "bank_accounts_section",
+  "bank_accounts"
+ ],
+ "fields": [
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Default Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_defaults",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "The last USD to EGP rate used on an SMS Transaction. Updated automatically.",
+   "fieldname": "default_usd_rate",
+   "fieldtype": "Float",
+   "label": "Default EGP Rate for USD",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_create",
+   "fieldtype": "Check",
+   "label": "Auto-create Entries for Matched Transactions"
+  },
+  {
+   "default": "0",
+   "description": "Applies to Personal Expenses, Journal Entries and Purchase Invoices. When off, they are created as drafts.",
+   "fieldname": "auto_submit",
+   "fieldtype": "Check",
+   "label": "Auto-submit Created Documents"
+  },
+  {
+   "fieldname": "senders_section",
+   "fieldtype": "Section Break",
+   "label": "SMS Senders"
+  },
+  {
+   "fieldname": "senders",
+   "fieldtype": "Table",
+   "label": "Senders",
+   "options": "SMS Sender Map"
+  },
+  {
+   "fieldname": "bank_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Accounts"
+  },
+  {
+   "fieldname": "bank_accounts",
+   "fieldtype": "Table",
+   "label": "Bank Accounts",
+   "options": "SMS Bank Account Map"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Parser Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Expense Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

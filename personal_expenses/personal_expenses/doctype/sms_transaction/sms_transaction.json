@@ -1,0 +1,454 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "SMS-TXN-.#####",
+ "creation": "2026-10-29 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "sms_import",
+  "column_break_header",
+  "sms_pattern",
+  "error_message",
+  "raw_section",
+  "raw_message",
+  "parsed_section",
+  "bank",
+  "account_identifier",
+  "account_kind",
+  "transaction_date",
+  "transaction_time",
+  "direction",
+  "column_break_parsed_1",
+  "currency",
+  "amount",
+  "balance_currency",
+  "balance",
+  "column_break_parsed_2",
+  "merchant",
+  "counterparty",
+  "reference",
+  "dedup_hash",
+  "decision_section",
+  "matched_rule",
+  "description",
+  "is_company_expense",
+  "personal_category",
+  "company",
+  "entry_type",
+  "column_break_decision",
+  "expense_account",
+  "supplier",
+  "item",
+  "cost_center",
+  "currency_section",
+  "exchange_rate",
+  "column_break_currency",
+  "company_currency",
+  "amount_in_egp",
+  "learn_section",
+  "save_as_rule",
+  "rule_keyword",
+  "rule_match_on",
+  "column_break_learn",
+  "created_rule",
+  "linked_section",
+  "linked_doctype",
+  "column_break_linked",
+  "linked_document",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Needs Review",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Matched\nNeeds Review\nCreated\nIgnored\nDuplicate\nError",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sms_import",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "SMS Import",
+   "options": "SMS Import",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_header",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sms_pattern",
+   "fieldtype": "Link",
+   "label": "SMS Pattern",
+   "options": "SMS Pattern",
+   "read_only": 1
+  },
+  {
+   "depends_on": "error_message",
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "raw_message",
+   "fieldtype": "Small Text",
+   "label": "Raw Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parsed_section",
+   "fieldtype": "Section Break",
+   "label": "Parsed Details"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bank",
+   "options": "\nHSBC\nCIB",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_identifier",
+   "fieldtype": "Data",
+   "label": "Account Identifier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_kind",
+   "fieldtype": "Select",
+   "label": "Account Type",
+   "options": "\nBank Account\nCredit Card",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transaction_time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Direction",
+   "options": "\nDebit\nCredit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_parsed_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_currency",
+   "fieldtype": "Link",
+   "label": "Balance Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance After",
+   "options": "balance_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_parsed_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "merchant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Merchant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "counterparty",
+   "fieldtype": "Data",
+   "label": "Counterparty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dedup_hash",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Dedup Hash",
+   "no_copy": 1,
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "Decision"
+  },
+  {
+   "fieldname": "matched_rule",
+   "fieldtype": "Link",
+   "label": "Matched Rule",
+   "no_copy": 1,
+   "options": "SMS Match Rule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "is_company_expense",
+   "fieldtype": "Check",
+   "label": "Is Company Expense"
+  },
+  {
+   "depends_on": "eval:!doc.is_company_expense",
+   "fieldname": "personal_category",
+   "fieldtype": "Link",
+   "label": "Personal Expense Category",
+   "options": "Categories"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "label": "Entry Type",
+   "options": "\nJournal Entry\nPurchase Invoice"
+  },
+  {
+   "fieldname": "column_break_decision",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "description": "Required for Journal Entry. For Purchase Invoice it overrides the item's default expense account.",
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "depends_on": "eval:doc.currency && doc.company_currency && doc.currency != doc.company_currency",
+   "fieldname": "currency_section",
+   "fieldtype": "Section Break",
+   "label": "Currency Conversion"
+  },
+  {
+   "description": "Defaults to the last rate used. The rate you submit becomes the new default.",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "precision": "6"
+  },
+  {
+   "fieldname": "column_break_currency",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_in_egp",
+   "fieldtype": "Currency",
+   "label": "Amount in EGP",
+   "options": "company_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "learn_section",
+   "fieldtype": "Section Break",
+   "label": "Learn"
+  },
+  {
+   "description": "On submit, create an SMS Match Rule from this decision",
+   "fieldname": "save_as_rule",
+   "fieldtype": "Check",
+   "label": "Save as New Rule",
+   "no_copy": 1
+  },
+  {
+   "depends_on": "save_as_rule",
+   "fieldname": "rule_keyword",
+   "fieldtype": "Data",
+   "label": "Keyword",
+   "mandatory_depends_on": "save_as_rule",
+   "no_copy": 1
+  },
+  {
+   "depends_on": "save_as_rule",
+   "fieldname": "rule_match_on",
+   "fieldtype": "Select",
+   "label": "Match On",
+   "no_copy": 1,
+   "options": "Merchant\nCounterparty\nFull Text"
+  },
+  {
+   "fieldname": "column_break_learn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_rule",
+   "fieldtype": "Link",
+   "label": "Created Rule",
+   "no_copy": 1,
+   "options": "SMS Match Rule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_section",
+   "fieldtype": "Section Break",
+   "label": "Created Document"
+  },
+  {
+   "fieldname": "linked_doctype",
+   "fieldtype": "Link",
+   "label": "Linked Document Type",
+   "no_copy": 1,
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_linked",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Linked Document",
+   "no_copy": 1,
+   "options": "linked_doctype",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SMS Transaction",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Transaction",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Expense Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "description",
+ "track_changes": 1
+}

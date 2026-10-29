@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-29 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "keyword",
+  "match_on",
+  "match_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "keyword",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Keyword",
+   "reqd": 1
+  },
+  {
+   "default": "Merchant",
+   "fieldname": "match_on",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Match On",
+   "options": "Merchant\nCounterparty\nFull Text"
+  },
+  {
+   "default": "Contains",
+   "description": "All match types ignore case",
+   "fieldname": "match_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Match Type",
+   "options": "Contains\nExact\nRegex"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Match Rule Keyword",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

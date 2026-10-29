@@ -1,0 +1,28 @@
+From HSBC: 06OCT26 DiDi Purchase from 071-014***-013 EGP 277.20- Your available balance is EGP 116,713.80
+ Monday, Oct 12 · 5:31 PM
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 40,020.00 on 12-10-2026 17:31 to MOHAMMAD MUSLIM YUSUFALI HAMID with reference 4b9e8df7. For further details, please contact HSBC call centre
+ Tuesday, Oct 13 · 5:18 PM
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 20,020.00 on 13-10-2026 17:17 to MUSTANSIR SHABBIR MAIMOON with reference be619a37. For further details, please contact HSBC call centre
+ Thursday, Oct 15 · 4:22 PM
+From HSBC: 15OCT26 ANTHROPIC* CLAUDE SU Purchase from 071-014***-111 USD 22.80- Your available balance is USD 33,321.80
+ Friday, Oct 16 · 9:17 AM
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 950.95 on 16-10-2026 09:16 to xxxx with reference 521cf73a. For further details, please contact HSBC call centre
+ Friday, Oct 16 · 10:47 PM
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 550.55 on 16-10-2026 22:47 to MUSTANSIR SHABBIR MAIMOON with reference 7b92f8ca. For further details, please contact HSBC call centre
+ Sunday · 12:03 PM
+From HSBC: 25OCT26 HOSTINGER* HOSTINGER Purchase from 071-014***-111 USD 423.94- Your available balance is USD 32,897.86
+ Sunday · 8:31 PM
+25-10-2026 20:31 You have entered an invalid IPN PIN for your HSBC Account XXX013.
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 6,806.80 on 25-10-2026 20:30 to MUSTANSIR SHABBIR MAIMOON with reference f4d1cbf6. For further details, please contact HSBC call centre
+Your HSBC Account ********8013 was debited with IPN outward transfer for EGP 6,806.80 on 25-10-2026 20:31 to ahmed mahmoud hussein baghdady with reference 36cfe132. For further details, please contact HSBC call centre
+ Tuesday · 9:03 AM
+From HSBC: 27OCT26 Google Facebook Purchase from 071-014***-111 USD 4.53- Your available balance is USD 32,893.33
+ Tuesday · 10:37 AM
+From HSBC: 27OCT26 ANTHROPIC* CLAUDE SU Purchase from 071-014***-111 USD 22.80- Your available balance is USD 32,870.53
+ Tuesday · 12:59 PM
+From HSBC: 27OCT26 ANTHROPIC* CLAUDE SU Purchase from 071-014***-111 USD 22.80- Your available balance is USD 32,847.73
+ Wednesday · 2:22 PM
+From HSBC: 28OCT26 LINK.COM* OPENROUTER Purchase from 071-014***-111 USD 11.40- Your available balance is USD 36,398.99
+From HSBC: 28OCT26 OPENAI Purchase from 071-014***-111 USD 5.70- Your available balance is USD 36,393.29
+ 7:02 AM
+From HSBC: 28OCT26 TT Payment to 071-014***-111 USD 3,562.66+ Your available balance is USD 36,410.39

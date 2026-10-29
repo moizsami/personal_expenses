@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "SMS-IMP-.#####",
+ "creation": "2026-10-29 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sender",
+  "bank",
+  "column_break_header",
+  "parsed_on",
+  "raw_section",
+  "raw_text",
+  "summary_section",
+  "parsed_count",
+  "matched_count",
+  "column_break_summary_1",
+  "created_count",
+  "needs_review_count",
+  "column_break_summary_2",
+  "duplicate_count",
+  "noise_count",
+  "column_break_summary_3",
+  "error_count",
+  "results_section",
+  "results"
+ ],
+ "fields": [
+  {
+   "description": "The phone SMS thread you copied from. Senders are configured in SMS Parser Settings.",
+   "fieldname": "sender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sender",
+   "options": "",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bank",
+   "options": "\nHSBC\nCIB",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_header",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parsed_on",
+   "fieldtype": "Datetime",
+   "label": "Parsed On",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "raw_text",
+   "fieldtype": "Long Text",
+   "label": "Raw SMS Text",
+   "reqd": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "parsed_count",
+   "fieldtype": "Int",
+   "label": "Parsed",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "matched_count",
+   "fieldtype": "Int",
+   "label": "Matched",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_count",
+   "fieldtype": "Int",
+   "label": "Created",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "needs_review_count",
+   "fieldtype": "Int",
+   "label": "Needs Review",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duplicate_count",
+   "fieldtype": "Int",
+   "label": "Duplicates",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "noise_count",
+   "fieldtype": "Int",
+   "label": "Noise",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "error_count",
+   "fieldtype": "Int",
+   "label": "Errors",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Results",
+   "no_copy": 1,
+   "options": "SMS Import Line",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Import",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Expense Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

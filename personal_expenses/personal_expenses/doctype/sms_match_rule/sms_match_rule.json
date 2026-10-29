@@ -1,0 +1,226 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:rule_name",
+ "creation": "2026-10-29 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "enabled",
+  "column_break_main",
+  "priority",
+  "keywords_section",
+  "keywords",
+  "filters_section",
+  "bank",
+  "filter_currency",
+  "column_break_filters",
+  "direction",
+  "action_section",
+  "is_company_expense",
+  "personal_category",
+  "company",
+  "entry_type",
+  "expense_account",
+  "column_break_action",
+  "supplier",
+  "item",
+  "cost_center",
+  "description_section",
+  "description_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "10",
+   "description": "Lower numbers are checked first",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Priority"
+  },
+  {
+   "description": "The rule matches when any keyword matches",
+   "fieldname": "keywords_section",
+   "fieldtype": "Section Break",
+   "label": "Keywords"
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Table",
+   "label": "Keywords",
+   "options": "SMS Match Rule Keyword",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filters_section",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Bank",
+   "options": "\nHSBC\nCIB"
+  },
+  {
+   "fieldname": "filter_currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_filters",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Debit",
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Debit\nCredit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action_section",
+   "fieldtype": "Section Break",
+   "label": "Action"
+  },
+  {
+   "fieldname": "is_company_expense",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Company Expense"
+  },
+  {
+   "depends_on": "eval:!doc.is_company_expense",
+   "fieldname": "personal_category",
+   "fieldtype": "Link",
+   "label": "Personal Expense Category",
+   "mandatory_depends_on": "eval:!doc.is_company_expense",
+   "options": "Categories"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "mandatory_depends_on": "eval:doc.is_company_expense",
+   "options": "Company"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "label": "Entry Type",
+   "mandatory_depends_on": "eval:doc.is_company_expense",
+   "options": "\nJournal Entry\nPurchase Invoice"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "description": "Required for Journal Entry. For Purchase Invoice it overrides the item's default expense account.",
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "mandatory_depends_on": "eval:doc.is_company_expense && doc.entry_type=='Journal Entry'",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_action",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "mandatory_depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "options": "Supplier"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "mandatory_depends_on": "eval:doc.is_company_expense && doc.entry_type=='Purchase Invoice'",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:doc.is_company_expense",
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "description": "Optional, e.g. {merchant} {date}. Placeholders: {merchant} {counterparty} {date} {time} {reference} {amount} {currency} {bank} {account}",
+   "fieldname": "description_template",
+   "fieldtype": "Data",
+   "label": "Description Template"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Match Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Expense Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "priority",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "rule_name",
+ "track_changes": 1
+}

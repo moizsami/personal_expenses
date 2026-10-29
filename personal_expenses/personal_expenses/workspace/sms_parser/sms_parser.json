@@ -1,0 +1,82 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"sms-hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>SMS Expense Parser</b></span>\", \"col\": 12}}, {\"id\": \"sms-sc-0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New SMS Import\", \"col\": 4}}, {\"id\": \"sms-sc-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Transactions (Needs Review)\", \"col\": 4}}, {\"id\": \"sms-sc-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Match Rules\", \"col\": 4}}, {\"id\": \"sms-sc-3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Parser Settings\", \"col\": 4}}, {\"id\": \"sms-sc-4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Imports\", \"col\": 4}}, {\"id\": \"sms-sc-5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Patterns\", \"col\": 4}}]",
+ "creation": "2026-10-29 12:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "message",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "SMS Parser",
+ "links": [],
+ "modified": "2026-10-29 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Personal Expenses",
+ "name": "SMS Parser",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Expense Manager"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 50.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "New SMS Import",
+   "link_to": "SMS Import",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "format": "{} Needs Review",
+   "label": "SMS Transactions (Needs Review)",
+   "link_to": "SMS Transaction",
+   "stats_filter": "[[\"SMS Transaction\", \"status\", \"=\", \"Needs Review\", false], [\"SMS Transaction\", \"docstatus\", \"=\", 0, false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Match Rules",
+   "link_to": "SMS Match Rule",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "SMS Parser Settings",
+   "link_to": "SMS Parser Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Imports",
+   "link_to": "SMS Import",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Patterns",
+   "link_to": "SMS Pattern",
+   "type": "DocType"
+  }
+ ],
+ "title": "SMS Parser"
+}
