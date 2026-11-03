@@ -1,7 +1,7 @@
 {
  "charts": [],
- "content": "[{\"id\": \"sms-hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>SMS Expense Parser</b></span>\", \"col\": 12}}, {\"id\": \"sms-sc-0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New SMS Import\", \"col\": 4}}, {\"id\": \"sms-sc-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Transactions (Needs Review)\", \"col\": 4}}, {\"id\": \"sms-sc-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Match Rules\", \"col\": 4}}, {\"id\": \"sms-sc-3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Parser Settings\", \"col\": 4}}, {\"id\": \"sms-sc-4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Imports\", \"col\": 4}}, {\"id\": \"sms-sc-5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SMS Patterns\", \"col\": 4}}]",
- "creation": "2026-10-29 12:00:00.000000",
+ "content": "[{\"id\":\"sms-hdr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>SMS Expense Parser</b></span>\",\"col\":12}},{\"id\":\"sms-sc-0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New SMS Import\",\"col\":4}},{\"id\":\"sms-sc-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Transactions (Needs Review)\",\"col\":5}},{\"id\":\"sms-sc-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Match Rules\",\"col\":3}},{\"id\":\"sms-sc-3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Parser Settings\",\"col\":4}},{\"id\":\"sms-sc-4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Imports\",\"col\":4}},{\"id\":\"sms-sc-5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Patterns\",\"col\":4}}]",
+ "creation": "2026-10-29 12:00:00",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "SMS Parser",
  "links": [],
- "modified": "2026-10-29 12:00:00.000000",
+ "modified": "2026-10-29 16:25:10.078521",
  "modified_by": "Administrator",
  "module": "Personal Expenses",
  "name": "SMS Parser",
@@ -46,7 +46,7 @@
    "format": "{} Needs Review",
    "label": "SMS Transactions (Needs Review)",
    "link_to": "SMS Transaction",
-   "stats_filter": "[[\"SMS Transaction\", \"status\", \"=\", \"Needs Review\", false], [\"SMS Transaction\", \"docstatus\", \"=\", 0, false]]",
+   "stats_filter": "[[\"SMS Transaction\", \"status\", \"=\", \"Needs Review\"], [\"SMS Transaction\", \"docstatus\", \"=\", 0]]",
    "type": "DocType"
   },
   {

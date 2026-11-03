@@ -15,7 +15,7 @@ from personal_expenses.sms_parser.importer import load_patterns
 from personal_expenses.sms_parser.parser import ERROR, NOISE, PARSED, parse_text
 from personal_expenses.sms_parser.seed import seed_all
 
-# These tests run against a real site; never generate dependent test records (v15 and v16 names).
+# These tests run against a real site; never generate dependent test records.
 LINKED_DOCTYPES = [
 	"Account",
 	"Categories",
@@ -31,7 +31,6 @@ LINKED_DOCTYPES = [
 	"SMS Transaction",
 	"Supplier",
 ]
-test_ignore = LINKED_DOCTYPES
 IGNORE_TEST_RECORD_DEPENDENCIES = LINKED_DOCTYPES
 
 FIXTURES = os.path.join(os.path.dirname(__file__), "fixtures")

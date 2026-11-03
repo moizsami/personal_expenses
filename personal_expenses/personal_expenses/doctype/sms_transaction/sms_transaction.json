@@ -1,11 +1,23 @@
 {
  "actions": [],
- "allow_rename": 0,
  "autoname": "SMS-TXN-.#####",
- "creation": "2026-10-29 12:00:00.000000",
+ "creation": "2026-10-29 12:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "decision_section",
+  "matched_rule",
+  "description",
+  "is_company_expense",
+  "personal_category",
+  "company",
+  "entry_type",
+  "column_break_decision",
+  "expense_account",
+  "supplier",
+  "item",
+  "cost_center",
+  "section_break_kudl",
   "status",
   "sms_import",
   "column_break_header",
@@ -30,18 +42,6 @@
   "counterparty",
   "reference",
   "dedup_hash",
-  "decision_section",
-  "matched_rule",
-  "description",
-  "is_company_expense",
-  "personal_category",
-  "company",
-  "entry_type",
-  "column_break_decision",
-  "expense_account",
-  "supplier",
-  "item",
-  "cost_center",
   "currency_section",
   "exchange_rate",
   "column_break_currency",
@@ -172,8 +172,7 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount",
-   "options": "currency",
-   "read_only": 1
+   "options": "currency"
   },
   {
    "fieldname": "balance_currency",
@@ -240,6 +239,7 @@
    "label": "Description"
   },
   {
+   "default": "0",
    "fieldname": "is_company_expense",
    "fieldtype": "Check",
    "label": "Is Company Expense"
@@ -336,6 +336,7 @@
    "label": "Learn"
   },
   {
+   "default": "0",
    "description": "On submit, create an SMS Match Rule from this decision",
    "fieldname": "save_as_rule",
    "fieldtype": "Check",
@@ -403,16 +404,19 @@
    "options": "SMS Transaction",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kudl",
+   "fieldtype": "Section Break"
   }
  ],
- "index_web_pages_for_search": 0,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-10-29 12:00:00.000000",
+ "modified": "2026-10-29 16:30:23.245701",
  "modified_by": "Administrator",
  "module": "Personal Expenses",
  "name": "SMS Transaction",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -446,6 +450,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
